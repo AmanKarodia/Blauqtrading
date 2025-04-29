@@ -81,11 +81,11 @@ export const resourcesLinks = [
 ];
 
 export const platformLinks = [
-  { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
-  { href: "#", text: "Release Notes" },
+  { href: "https://www.instagram.com/blauqtrading", text: "Instagram" },
+  { href: "https://www.facebook.com/share/15A3NWZNz8/", text: "Facebook" },
+  { href: "https://x.com/toughgoldbull", text: "X" },
+  { href: "https://www.tiktok.com/@toughgoldbull", text: "TikTok" },
+  { href: "https://youtube.com/@toughgoldbull", text: "Youtube" },
 ];
 
 export const communityLinks = [
