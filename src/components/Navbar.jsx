@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="text-xl tracking-tight">BLAUQTRADING</span>
           </div>
             <div className="hidden lg:flex space-x-8 items-center">
-              <a href="#">
+              <a href="#" className="cursor-pointer">
                 FAQ
               </a>
               <button>
@@ -29,7 +29,7 @@ const Navbar = () => {
               </button>
             </div>
             <div className="hidden lg:flex justify-center space-x-12 items-center">
-              <a href="#" className="bg-yellow-400 text-white py-2 px-3 rounded-3xl">
+              <a href="https://t.me/ThoughGoldBullGroup" className="bg-yellow-400 text-white py-2 px-3 rounded-3xl">
                 Join Now
               </a>
             </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 rounded-3xl bg-yellow-400 text-white">
+              <a href="https://t.me/ThoughGoldBullGroup" className="py-2 px-3 rounded-3xl bg-yellow-400 text-white">
                 Join Now
               </a>
             </div>

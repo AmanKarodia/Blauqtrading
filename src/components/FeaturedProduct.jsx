@@ -35,7 +35,7 @@ function FeaturedProduct() {
                     ))}
                   </div>
                     <div className="lg:flex justify-center items-center mt-10">
-                      <a href="#" className="bg-yellow-400 text-white shadow-lg shadow-yellow-200/50 dark:shadow-lg dark:shadow-yellow-200/80 py-2 px-3 rounded-3xl">
+                      <a href="https://pay.yoco.com/blauqtrading" className="bg-yellow-400 text-white shadow-lg shadow-yellow-200/50 dark:shadow-lg dark:shadow-yellow-200/80 py-2 px-3 rounded-3xl">
                         Purchase Now
                       </a>
                     </div>

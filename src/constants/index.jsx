@@ -96,7 +96,7 @@ export const communityLinks = [
   { href: "#", text: "Jobs" },
 ];
 
-export const pricingOptions = [
+export const ProductOpiton = [
   {
     title: "Today",
     price: "R20",

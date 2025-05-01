@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
+import { db } from '../../firebase'; // Adjust path as needed
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const SubscribeForm = () => {
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setError('Please enter a valid email address.');
       return;
     }
 
-    setError('');
-    setSuccess(true);
-
-    // Simulate sending data to backend
-    console.log("Subscribed email:", email);
-
-    // Reset form (optional)
-    setEmail('');
+    try {
+      await addDoc(collection(db, 'subscribers'), {
+        email,
+        timestamp: serverTimestamp(),
+      });
+      setSuccess(true);
+      setEmail('');
+      setError('');
+    } catch (err) {
+      console.error("Error adding document: ", err);
+      setError('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -44,7 +49,7 @@ const SubscribeForm = () => {
           Subscribe
         </button>
       </form>
-      {success && <p className="mt-4 text-green-600 text-center">Thank you for subscribing!</p>}
+      {success && <p className="mt-4 text-yellow-300 text-center">Thank you for subscribing!</p>}
     </div>
   );
 };
