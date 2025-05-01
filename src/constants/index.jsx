@@ -6,8 +6,8 @@ import { Handshake } from 'lucide-react';
 import { Store } from 'lucide-react';
 
 export const navItems = [
-    { label: "FAQ", href: "#" },
-    { label: "Shop", href: "#" },
+    { label: "FAQ", scrollTo: "fp" },
+    { label: "Shop", scrollTo: "price"},
 ];
 
 export const features = [

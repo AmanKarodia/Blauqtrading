@@ -5,7 +5,7 @@ import { productsfeatured } from "../constants"
 
 function FeaturedProduct() {
   return (
-    <div className="relative mt-20 border-b border-neutral-800 min-h-screen">
+    <div id="fp" className="relative mt-20 border-b border-neutral-800 min-h-screen">
         <div className="flex justify-center items-center flex-col">
             <span className="rounded-full h-10 px-2 py-1">
                 <Eye />
