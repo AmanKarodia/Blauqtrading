@@ -7,7 +7,7 @@ const { getFirestore } = require('firebase-admin/firestore');
 const { getAuth } = require('firebase-admin/auth');
 const { sendLogisticsEmail } = require('./utils/sendEmail');
 const { verifyToken, checkRole } = require('./middleware/auth');
-const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY, 'base64').toString('utf8')
 
 initializeApp({
   credential: cert(serviceAccount),
