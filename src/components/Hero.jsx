@@ -1,31 +1,43 @@
-import React from 'react'
-import world from '../assets/7EkkL7ODPfc.jpg'
+import React from 'react';
 
 function Hero() {
-    
   return (
     <div className="relative w-full h-screen overflow-hidden">
-        {/* <video autoPlay muted loop playsInline className="absolute top-0 left-0 w-full h-full object-cover">
-            <source src={bgv}/>
-            Your browser does not support the video tag.
-        </video> */}
-         <img src={world}
-        className="absolute top-0 left-0 w-full h-full opacity-30"
-        />
+      {/* Background Video (optional) */}
+      {/* <video autoPlay muted loop playsInline className="absolute top-0 left-0 w-full h-full object-cover">
+          <source src={bgv}/>
+          Your browser does not support the video tag.
+      </video> */}
 
-        <div className="relative z-20 flex flex-col items-center mt-6 lg:mt-12">
-            <h1 className="text-yellow-300 mt-48 text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide font-bold">
-                BLAUQTRADING
-            </h1>
-            <p className="mt-10 text-lg text-center text-white max-w-4xl font-sans">
-                Welcome to BLAUQTRADING — South Africa’s next wave in digital innovation.
-                We’re not just building a crypto platform; we’re shaping the future of finance, marketing, and distribution.
-                Whether you’re investing in the blockchain economy or scaling your business, our solutions are designed to empower and evolve with you.
-                Join us and be part of the movement redefining what’s possible.
-            </p>
+      {/* Background Image
+      <img
+        src={null}
+        alt="Hero background"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+      /> */}
+
+      {/* Content */}
+      <div className="relative z-20 flex flex-col justify-center h-full px-6 sm:px-12 md:px-20 lg:px-32 xl:px-48">
+        <h1 className="text-yellow-300 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide">
+          BLAUQTRADING - <span className="text-white">Africa's Next Wave in Digital Innovation</span>
+        </h1>
+
+        <p className="mt-6 sm:mt-8 text-white text-lg sm:text-xl md:text-2xl max-w-xl md:max-w-2xl lg:max-w-3xl">
+          We empower businesses and communities through finance, logistics, telecom, and product affiliation. Partner with us to scale and redefine what’s possible.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+          <button className="bg-yellow-500 text-black rounded-lg py-3 px-6 text-lg hover:bg-yellow-400 transition">
+            Discover Our Services
+          </button>
+          <button className="text-yellow-500 border-2 border-yellow-500 rounded-lg py-3 px-6 text-lg hover:bg-yellow-500 hover:text-black transition">
+            Partner with Us
+          </button>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

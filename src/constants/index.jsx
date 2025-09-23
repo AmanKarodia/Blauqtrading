@@ -1,76 +1,55 @@
-import { Triangle } from 'lucide-react';
-import { MessageSquareMore } from 'lucide-react';
-import { TriangleAlert } from 'lucide-react';
-import { PackageOpen } from 'lucide-react';
+import { Wallet } from 'lucide-react';
+import { Truck } from 'lucide-react';
 import { Handshake } from 'lucide-react';
-import { Store } from 'lucide-react';
-import cl from '../assets/claudio.jpg';
+import { ArrowUpDown } from 'lucide-react';
+import { Earth } from 'lucide-react';
+import { Factory } from 'lucide-react';
+import { ChartLine } from 'lucide-react';
 
-export const navItems = [
-    { label: "FAQ", scrollTo: "fp" },
-    { label: "Shop", scrollTo: "price"},
-    { label: "Services", href: "/services" },
-];
 
 export const features = [
     {
-      icon: <Triangle />,
-      text: "Real-time Insights for Informed Decisions",
+      icon: <Wallet size={64} />,
+      text: "Digital Finance & Wallets",
       description:
-        "Gain valuable insights and make informed decisions with our cutting-edge tracking tools, providing real-time data on your crypto investments and market trends.",
+        "Empower your financial journey with expert insights and secure crypto wallet solutions.",
     },
     {
-      icon: <MessageSquareMore />,
-      text: "Instant Market Updates",
+      icon: <Truck size={64} />,
+      text: "Logistics & Distribution",
       description:
-        "Be ahead of the game with instant updates on market movements, price shifts, and lucrative opportunities, ensuring you never miss important crypto events.",
+        "Deliver products faster and smarter with tech-driven logistics and reliable supply chains.",
     },
     {
-      icon: <TriangleAlert />,
-      text: "Expand Your Crypto Knowledge",
+      icon: <ArrowUpDown size={64} />,
+      text: "Telcom & SIM Services",
       description:
-        "Enhance your understanding of cryptocurrency through our educational materials and expert insights, empowering you to make confident investment choices.",
+        "Boost performance through real-time collaboration tools and hands-on telecom solutions.",
     },
     {
-      icon: <PackageOpen />,
-      text: "BlauqTrading - Product Distribution",
+      icon: <Handshake size={64} />,
+      text: "Product Affiliation",
       description:
-        "BlauqTrading is a dynamic distribution company dedicated to streamlining the delivery of high-quality products across South Africa. We specialize in connecting suppliers with retailers and end customers through efficient, tech-driven logistics and personalized service. Whether you're a brand looking to scale or a business needing reliable supply, BlauqTrading ensures your products move fast, efficiently, and reliably.",
-    },
-    {
-      icon: <Handshake />,
-      text: "Collaboration & Field Training",
-      description:
-        "Empowering teams with hands-on training and real-time collaboration tools to boost performance and drive results in the field.",
-    },
-    {
-      icon: <Store />,
-      text: "Smart Marketing Solutions",
-      description:
-        "BlauqTrading offers targeted marketing strategies to help your products stand out, reach the right audience, and drive real growth.",
+        "Reach the right audience with targeted marketing strategies that drive real growth.",
     },
   ];
 
-export const productsfeatured = [
+export const ReasonsToPick = [
   {
-    text: "Robust Security Measures",
-    description:
-    "Our platform integrates advanced security measures to protect your digital assets and personal information.",
+    icon: <Earth size={64} />,
+    text: "Africa-first Innovation",
   },
   {
-    text: "Effortless Transactions",
-    description:
-    "Experience seamless and efficient transactions with our user-friendly interface and rapid processing.",
+    icon: <Factory size={64} />,
+    text: "Multi-Industry Ecosystem",
   },
   {
-    text: "24/7 Customer Support",
-    description:
-    "Get round-the-clock assistance from our dedicated support team for any queries or help.",
+    icon: <Handshake size={64} />,
+    text: "Trusted Partnerships",
   },
   {
-    text: "Intuitive User Interface",
-    description:
-    "Our intuitive interface makes navigating the world of cryptocurrency easy and accessible, whether you're new to crypto or an experienced trader.",
+    icon: <ChartLine size={64} />,
+    text: "Scalable Growth",
   },
 ];
 
@@ -111,14 +90,5 @@ export const ProductOpiton = [
     discription: [
       "In ZAR price is R20",
     ],
-  },
-];
-
-export const OurServices = [
-  {
-    title: "Courier Service",
-    description: "Fast and reliable delivery solutions for your packages. Local and national options available.",
-    image: cl, // Replace with your own image
-    button: "Request Now",
   },
 ];
