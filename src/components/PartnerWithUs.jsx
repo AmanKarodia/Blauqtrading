@@ -32,7 +32,7 @@ export default function PartnerForm() {
         "service_j3jr175",   // Service ID
         "template_l2dzrwq",  // Template ID
         templateParams,      // Must match EmailJS template variables
-        "yDD1YqE3Fy2Qe-x60o" // User ID / Public Key
+        "DD1YqE3Fy2Qe-x60o" // User ID / Public Key
       )
       .then(
         (result) => {
