@@ -3,51 +3,32 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 export default function PartnerForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    number: "",
-    business: "",
-    country: "",
-  });
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setMessage(e.target.value);
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Map your state to template variables exactly as defined in EmailJS template
     const templateParams = {
-    to_name: "BLAUQTRADING Team", // or your recipient name
-    from_name: formData.name,
-    message: `
-      Email: ${formData.email}
-      Phone: ${formData.number}
-      Business: ${formData.business}
-      Country: ${formData.country}
-    `,
-  };
+      to_name: "BLAUQTRADING Team",
+      from_name: "Partner Form Submission", // generic sender name
+      message: message || "No message provided",
+    };
 
     emailjs
       .send(
         "service_j3jr175",   // Service ID
         "template_l2dzrwq",  // Template ID
-        templateParams,      // Must match EmailJS template variables
-        "DD1YqE3Fy2Qe-x60o" // User ID / Public Key
+        templateParams,
+        "yDD1YqE3Fy2Qe-x60o" // User ID / Public Key
       )
       .then(
-        (result) => {
+        () => {
           alert("Request sent successfully ✅");
-          // Reset form
-          setFormData({
-            name: "",
-            email: "",
-            number: "",
-            business: "",
-            country: "",
-          });
+          setMessage(""); // reset textarea
         },
         (error) => {
           console.error(error);
@@ -67,50 +48,13 @@ export default function PartnerForm() {
         onSubmit={sendEmail}
         className="bg-white shadow-md rounded-xl p-6 w-full max-w-md space-y-4"
       >
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
+        <textarea
+          name="message"
+          placeholder="Please leave your full info here: Name, Contact, Company, Country, etc."
+          value={message}
           onChange={handleChange}
           required
-          className="w-full border-2 border-black p-2 text-black rounded"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="w-full border-2 border-black p-2 text-black rounded"
-        />
-        <input
-          type="text"
-          name="number"
-          placeholder="Phone Number"
-          value={formData.number}
-          onChange={handleChange}
-          required
-          className="w-full border-2 border-black p-2 text-black rounded"
-        />
-        <input
-          type="text"
-          name="business"
-          placeholder="Business Name"
-          value={formData.business}
-          onChange={handleChange}
-          required
-          className="w-full border-2 border-black p-2 text-black rounded"
-        />
-        <input
-          type="text"
-          name="country"
-          placeholder="Country"
-          value={formData.country}
-          onChange={handleChange}
-          required
-          className="w-full border-2 border-black p-2 text-black rounded"
+          className="w-full border-2 border-black p-2 text-black rounded h-48"
         />
 
         <button
