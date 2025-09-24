@@ -20,12 +20,15 @@ export default function PartnerForm() {
 
     // Map your state to template variables exactly as defined in EmailJS template
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      phone_number: formData.number,
-      business_name: formData.business,
-      country: formData.country,
-    };
+    to_name: "BLAUQTRADING Team", // or your recipient name
+    from_name: formData.name,
+    message: `
+      Email: ${formData.email}
+      Phone: ${formData.number}
+      Business: ${formData.business}
+      Country: ${formData.country}
+    `,
+  };
 
     emailjs
       .send(
