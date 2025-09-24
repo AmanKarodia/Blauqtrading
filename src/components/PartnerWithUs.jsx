@@ -18,18 +18,36 @@ export default function PartnerForm() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Map your state to template variables exactly as defined in EmailJS template
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone_number: formData.number,
+      business_name: formData.business,
+      country: formData.country,
+    };
+
     emailjs
       .send(
-        "service_j3jr175",   // from EmailJS
-        "template_l2dzrwq",  // from EmailJS
-        formData,
-        "yDD1YqE3Fy2Qe-x60o"       // from EmailJS
+        "service_j3jr175",   // Service ID
+        "template_l2dzrwq",  // Template ID
+        templateParams,      // Must match EmailJS template variables
+        "yDD1YqE3Fy2Qe-x60o" // User ID / Public Key
       )
       .then(
         (result) => {
           alert("Request sent successfully ✅");
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            number: "",
+            business: "",
+            country: "",
+          });
         },
         (error) => {
+          console.error(error);
           alert("Something went wrong ❌");
         }
       );
@@ -40,8 +58,7 @@ export default function PartnerForm() {
       <h1 className="text-3xl font-bold mb-6">Partner With Us</h1>
 
       {/* Google Translate widget */}
-      <div id="google_translate_element" className="mb-6">
-      </div>
+      <div id="google_translate_element" className="mb-6"></div>
 
       <form
         onSubmit={sendEmail}
